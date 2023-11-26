@@ -1,3 +1,4 @@
 import App from './App.ts';
+import {renderDOM} from '../core/SVTV.ts';
 
-console.log(App());
+renderDOM('#app', App);

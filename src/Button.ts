@@ -1,7 +1,7 @@
-import {createElement, createText} from '../core/SVTV.ts';
+import {createVirtualElement, createText} from '../core/SVTV.ts';
 
 const Button = ({count, setCount}: { count: number, setCount: Function }) => {
-	return createElement(
+	return createVirtualElement(
 		'button',
 		[],
 		[{name: 'click', value: setCount.bind(null, count + 1)}],
