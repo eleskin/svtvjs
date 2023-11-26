@@ -1,5 +1,5 @@
 export type VirtualNodeElementAttributes = {name: string, value: string}[];
-export type VirtualNodeElementHandlers = {name: string, value: object}[];
+export type VirtualNodeElementHandlers = {name: string, value: Function}[];
 
 export type VirtualNodeElement = {
 	tagName: string,

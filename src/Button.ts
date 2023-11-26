@@ -1,7 +1,12 @@
 import {createElement, createText} from '../core/SVTV.ts';
 
-const Button = () => {
-	return createElement('button', [], [], [createText.bind(null, 'Click me!')]);
+const Button = ({count, setCount}: { count: number, setCount: Function }) => {
+	return createElement(
+		'button',
+		[],
+		[{name: 'click', value: setCount.bind(null, count + 1)}],
+		[createText.bind(null, 'Click me!')]
+	);
 };
 
 export default Button;

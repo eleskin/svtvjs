@@ -26,9 +26,19 @@ class SVTV {
 			value,
 		};
 	}
+	
+	static useState<T>(initialState: T): [state: () => T, setState: (newState: T) => void] {
+		let state: T = initialState;
+		const setState = (newState: T): void => {
+			state = newState;
+		};
+		
+		return [() => state, setState];
+	}
 }
 
 const createElement = SVTV.createElement;
 const createText = SVTV.createText;
+const useState = SVTV.useState;
 
-export {createElement, createText};
+export {createElement, createText, useState};
